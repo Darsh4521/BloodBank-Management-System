@@ -1,0 +1,25 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Enter Otp</title>
+	<link rel="stylesheet" type="text/css" href="{% static '/style.css' %}">
+</head>
+<body>
+	<center>
+		{%include "header.html" %}
+		{% if msg %}
+		{{ msg }}
+		{% endif %}
+		<div class="table5_text"><caption>One Time Password</caption></div>
+		<div class="table5">
+		<form action="../verify_otp/" method="POST">
+			{% csrf_token %}
+			<div class="table5_td">Enter OTP : <input type="text" name="otp" class="table5_input"><br></div>
+			<input type="submit" name="s_otp" value="Submit" class="table5_button" >
+		</form>
+		</div>
+		{%include "footer.html"%}
+	</center>
+</body>
+</html>

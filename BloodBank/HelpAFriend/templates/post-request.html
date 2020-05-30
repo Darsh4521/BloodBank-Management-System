@@ -1,0 +1,105 @@
+{% load static%}
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Post Blood Request</title>
+	<link rel="stylesheet" type="text/css" href="{% static '/style.css' %}">
+</head>
+<body>
+	<center>
+	{% include "header.html" %}
+	<div class="table7_text"><h1>Blood Request</h1></div>
+	<form action="../post_req/" method="POST">
+		{% csrf_token %}
+		<div class="table7">
+		<table>
+			<tr>
+				<td class="table7_td">Patient Full Name : </td>
+				<td>
+					<input type="text" name="pname" class="table7_input">
+				</td>
+			</tr>
+			<tr>
+				<td class="table7_td">Patient Blood Group : </td>
+				<td>
+					<select name="blood" class="table7_input">
+						<option>---</option>
+						<option value="O+">O+</option>
+						<option value="O-">O-</option>
+						<option value="A+">A+</option>
+						<option value="A-">A-</option>
+						<option value="A1+">A1+</option>
+						<option value="A1-">A1-</option>
+						<option value="A1B+">A1B+</option>
+						<option value="A1B-">A1B-</option>
+						<option value="A2+">A2+</option>
+						<option value="A2-">A2-</option>
+						<option value="A2B+">A2B+</option>
+						<option value="A2B-">A2B-</option>
+						<option value="AB+">AB+</option>
+						<option value="AB-">AB-</option>
+						<option value="B+">B+</option>
+						<option value="B-">B-</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="table7_td">Patient's Age : </td>
+				<td>
+					<input type="text" name="age" class="table7_input">
+				</td>
+			</tr>
+			<tr>
+				<td class="table7_td">When You Need Blood? </td>
+				<td>
+					<input type="date" name="bdate" class="table7_input">
+				</td>
+			</tr>
+			<tr>
+				<td class="table7_td">How Many Units You Need? </td>
+				<td>
+					<input type="text" name="unit" class="table7_input"> mL
+				</td>
+			</tr>
+			<tr>
+				<td class="table7_td">Mobile Number : </td>
+				<td>
+					<input type="text" name="mobileno" class="table7_input">
+				</td>
+			</tr>
+			<tr>
+				<td class="table7_td">Hospital Name : </td>
+				<td>
+					<input type="text" name="hospital" class="table7_input">
+				</td>
+			</tr>
+			<tr>
+				<td class="table7_td">Location : </td>
+				<td>
+					<input type="text" name="location" class="table7_input">
+				</td>
+			</tr>
+			<tr>
+				<td class="table7_td">Patient's City : </td>
+				<td>
+					<textarea name="paddress" cols="30" rows="5" class="table7_input"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td class="table7_td">Purpose : </td>
+				<td>
+					<textarea name="purpose" cols="30" rows="5" class="table7_input"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" name="Submit" class="table7_button">
+				</td>
+			</tr>
+		</table>
+	</div>
+	</form>
+	{%include "footer.html" %}
+	</center>
+</body>
+</html>

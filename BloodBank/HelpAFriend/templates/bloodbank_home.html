@@ -1,0 +1,23 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{% static '/style.css' %}">
+</head>
+<body>
+	{% if request.session.name %}
+	<div class="dropdown">
+		
+	{{ request.session.name }}
+
+	<div class="dropdown-content">
+	<a href="../edit_bb_profile/">Edit Profile</a><br>
+	<a href="../change_pass/">Change Password</a><br>
+	<a href="../bloodbank_details/">Available Units</a><br>
+	<a href="../logout/">Logout</a>
+	{% endif %}
+</div>
+</div>
+</body>
+</html>

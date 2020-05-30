@@ -1,0 +1,472 @@
+.header{
+	top: 0;
+	height: 50px;
+}
+.logo{
+	position: absolute;
+	margin-left: 55px;
+}
+h3{
+	position: absolute;
+    margin-left: 120px;
+    font-size: 30px;
+    margin-top: 9px;
+    color: #cc0000;
+}
+.login{
+	position: absolute;
+  margin-left: 77%;
+  margin-top: 16px;
+}
+
+a{
+	text-decoration: none;
+	font-size: 16px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #cc0000;
+  margin-top: 56px;
+  position: absolute;
+  width: 100% ;
+}
+
+li {
+  float:right;
+}
+
+li a {
+      display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 15px 82px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: red;
+}
+.footer {
+	height: 260px;
+  background-color: #cc0000;
+  margin-bottom: 0px;
+  margin-top: 40%;
+}
+h2{
+  color: white;
+  position: absolute;
+  margin-left: 14%;
+}
+.list{
+    color: white;
+    position: absolute;
+    margin-left: 14%;
+    margin-top: 90px;
+}
+.list > a {
+  color: white;
+  font-size: 19px;
+  margin-top: 87px;
+}
+.list1{
+    color: white;
+    position: absolute;
+    margin-left: 32%;
+    margin-top: 90px;
+    font-size: 22px;
+}
+.list2{
+    color: white;
+    position: absolute;
+    margin-left: 55%;
+    margin-top: 90px;
+}
+.list3{
+    color: white;
+    position: absolute;
+    margin-left: 78%;
+    margin-top: 90px;
+}
+.title{
+   position: absolute;
+    margin-left: 14%;
+    margin-top: 27px;
+    font-size: 30px;
+    color: white;
+    text-decoration: underline;
+}
+.title1{
+    position: absolute;
+    margin-left: 32%;
+    margin-top: 27px;
+    font-size: 30px;
+    color: white;
+    text-decoration: underline;
+}
+.title2{
+    position: absolute;
+    margin-left: 55%;
+    margin-top: 26px;
+    font-size: 30px;
+    color: white;
+    text-decoration: underline;
+}
+.title3{
+    position: absolute;
+    margin-left: 78%;
+    margin-top: 27px;
+    font-size: 30px;
+    color: white;
+    text-decoration: underline;
+}
+.images{
+  margin-top: 100px;
+}
+.table1
+{
+  position: absolute;
+  margin-top:16%;
+  margin-left:42%;
+}
+.login_form > td{
+  color: #cc0000;
+  
+}
+.table2{
+  position:absolute; 
+  margin-top:10%; 
+  margin-left:36%;
+}
+.table2_td{
+  color: #cc0000;
+  font-size: 20px
+}
+.table2_button{
+  background-color: #cc0000;
+  border: none;
+  color: white;
+  padding: 9px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 18px 10px;
+  cursor: pointer;
+}
+.table2_input {
+  width: 140%; 
+  border: none;
+  border-bottom: 1px solid #cc0000;
+ 
+}
+.table2_text{
+      position: absolute;
+    margin-left: 46%;
+    margin-top: 5%;
+    color: #cc0000;
+    font-size: 37px;
+}
+.table3_text{
+   position: absolute;
+    margin-left: 44%;
+    margin-top: 11%;
+    color: #cc0000;
+    font-size: 40px;
+}
+.table3{
+  position:absolute; 
+  margin-top:20%; 
+  margin-left:40%;
+}
+.table3_td{
+  color: #cc0000;
+  font-size: 20px
+}
+.table3_button{
+  background-color: #cc0000;
+  border: none;
+  color: white;
+  padding: 9px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 18px 10px;
+  cursor: pointer;
+  margin-left: 106px;
+}
+.table3_input {
+  width: 215%; 
+  border: none;
+  border-bottom: 1px solid #cc0000;
+ 
+}
+.table4{
+  position:absolute; 
+  margin-top:21%; 
+  margin-left:41%;
+}
+.table4_button{
+  background-color: #cc0000;
+  border: none;
+  color: white;
+  padding: 9px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 18px 10px;
+  cursor: pointer;
+  margin-left: 27px;
+}
+.table4_input {
+  width: 76%; 
+  border: none;
+  border-bottom: 1px solid #cc0000;
+ 
+}
+.table4_td{
+  color: #cc0000;
+  font-size: 20px
+}
+.table4_text{
+   position: absolute;
+    margin-left: 41%;
+    margin-top: 11%;
+    color: #cc0000;
+    font-size: 40px;
+}
+
+.table5{
+  position:absolute; 
+  margin-top:21%; 
+  margin-left:42%;
+}
+.table5_button{
+  background-color: #cc0000;
+  border: none;
+  color: white;
+  padding: 9px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 18px 10px;
+  cursor: pointer;
+  margin-left: 27px;
+}
+.table5_input {
+  width: 60%; 
+  border: none;
+  border-bottom: 1px solid #cc0000;
+ 
+}
+.table5_td{
+  color: #cc0000;
+  font-size: 20px
+}
+.table5_text{
+   position: absolute;
+    margin-left: 41%;
+    margin-top: 9%;
+    color: #cc0000;
+    font-size: 40px;
+}
+.table6{
+  position:absolute; 
+  margin-top:21%; 
+  margin-left:41%;
+}
+.table6_button{
+  background-color: #cc0000;
+  border: none;
+  color: white;
+  padding: 9px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 18px 10px;
+  cursor: pointer;
+  margin-left: 27px;
+}
+.table6_input {
+  width: 49%; 
+  border: none;
+  border-bottom: 1px solid #cc0000;
+ 
+}
+.table6_td{
+  color: #cc0000;
+  font-size: 20px
+}
+.table6_text{
+   position: absolute;
+    margin-left: 41%;
+    margin-top: 9%;
+    color: #cc0000;
+    font-size: 40px;
+}
+.table7{
+  position:absolute; 
+  margin-top:8%; 
+  margin-left:36%;
+}
+.table7_button{
+  background-color: #cc0000;
+  border: none;
+  color: white;
+  padding: 9px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 18px 10px;
+  cursor: pointer;
+  margin-left: 27px;
+}
+.table7_input {
+  width: 110%; 
+  border: none;
+  border-bottom: 1px solid #cc0000;
+ 
+}
+.table7_td{
+  color: #cc0000;
+  font-size: 20px
+}
+.table7_text{
+   position: absolute;
+    margin-left: 44%;
+    margin-top: 2%;
+    color: #cc0000;
+    font-size: 21px;
+}
+.table8{
+ position:absolute; 
+  margin-top:8%; 
+  width: 100%;
+}
+.table8_td{
+  text-align: center;
+    font-size: 20px;
+    color: black;
+}
+.table8_th{
+  text-align: center;
+  font-size: 24px;
+  color: #cc0000;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  float: right;
+  margin-top: 15px;
+  margin-right: 55px;
+  font-size: 22px;
+  flood-color: #cc0000;
+
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.table9{
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 40%;
+}
+.table9_input{
+    width: 22%;
+    border: none;
+    border-bottom: 1px solid #cc0000;
+    text-align: center;
+}
+.table10{
+  position:absolute; 
+  margin-top:11%; 
+  margin-left:40%;
+}
+.table11{
+  position: absolute;
+  margin-left: 40%;
+  margin-top:17%;
+}
+.table12_text{
+   position: absolute;
+   color: #cc0000;
+    margin-left: 17%;
+    margin-top: 5%;
+    font-size: 23px;
+}
+.table12{
+    position: absolute;
+    margin-left: 17%;
+    margin-top: 10%;
+    width: 69%;
+}
+.table12_th{
+  text-align: center;
+  font-size: 19px;
+  color: #cc0000;
+}
+.table12_td{
+  text-align: center;
+    font-size: 18px;
+    color: black;
+}
+.text_about{
+
+    position: absolute;
+    color: #cc0000;
+    font-size: 35px;
+    margin-top: 9%;
+}
+.p1{
+  position: absolute;
+  color: black;
+  font-size: 25px;
+  margin-top: 13%
+}
+.p2{
+  position: absolute;
+  color: black;
+  font-size: 25px;
+  margin-top: 20%
+}
+.p3{
+  position: absolute;
+  color: black;
+  font-size: 25px;
+  margin-top: 25%
+}
+.p4{
+  position: absolute;
+  color: black;
+  font-size: 25px;
+  margin-top: 28%
+}
+.p5{
+   position: absolute;
+  color: black;
+  font-size: 25px;
+  margin-top: 31%
+}

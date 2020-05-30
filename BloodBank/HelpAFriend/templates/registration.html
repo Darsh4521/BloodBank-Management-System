@@ -1,0 +1,121 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Page</title>
+	<link rel="stylesheet" type="text/css" href="{% static '/style.css' %}">
+</head>
+<body>
+	<center>
+	{% include "header.html" %}
+	<div class="table2_text"><caption>Registration</caption></div>	
+	<form action="../submit/" method="POST">
+		{% csrf_token %}
+		<div class="table2">
+		<table>
+			<tr>
+					<td class="table2_td">Full Name : </td>
+					<td><input type="text" name="fname" class="table2_input"></td>			
+			</tr>
+			<tr>
+				<td class="table2_td">Blood Group : </td>
+				<td>
+					<select name="blood" class="table2_input">
+						<option>Select</option>
+						<option value="O+">O+</option>
+						<option value="O-">O-</option>
+						<option value="A+">A+</option>
+						<option value="A-">A-</option>
+						<option value="A1+">A1+</option>
+						<option value="A1-">A1-</option>
+						<option value="A1B+">A1B+</option>
+						<option value="A1B-">A1B-</option>
+						<option value="A2+">A2+</option>
+						<option value="A2-">A2-</option>
+						<option value="A2B+">A2B+</option>
+						<option value="A2B-">A2B-</option>
+						<option value="AB+">AB+</option>
+						<option value="AB-">AB-</option>
+						<option value="B+">B+</option>
+						<option value="B-">B-</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="table2_td">DOB : </td>
+				<td>
+					<input type="date" name="dob" class="table2_input">
+				</td>
+			</tr>
+			<tr>
+				<td class="table2_td">Mobile Number : </td>
+				<td><input type="text" name="mobileno" class="table2_input"></td>
+			</tr>
+			<tr>
+				<td class="table2_td">Country : </td>
+				<td>
+					<input type="text" name="country" class="table2_input">
+				</td>
+			</tr>
+			<tr>
+				<td class="table2_td">State : </td>
+				<td>
+					<input type="text" name="state" class="table2_input">
+				</td>
+			</tr>
+			<tr>
+				<td class="table2_td">City : </td>
+				<td>
+					<input type="text" name="city" class="table2_input">
+				</td>
+			</tr>
+			<tr>
+				<td class="table2_td">Pincode : </td>
+				<td>
+					<input type="text" name="pincode" maxlength="6" class="table2_input">
+				</td>
+			</tr>
+			
+			<tr>
+				<td class="table2_td">Email Id : </td>
+				<td>
+					<input type="email" name="email" class="table2_input">
+				</td>
+			</tr>
+			<tr>
+				<td class="table2_td">Password : </td>
+				<td>
+					<input type="password" name="password" class="table2_input">
+				</td>
+			</tr>
+			<tr>
+				<td class="table2_td">Retype Password : </td>
+				<td>
+					<input type="password" name="rpassword" class="table2_input">
+				</td>
+			</tr>
+			<tr>
+				<td class="table2_td">Please confirm your availability <br> to donate blood : </td>
+				<td>
+					<select name="availability" class="table2_input">
+						<option>Select</option>
+						<option value="available">Available</option>
+						<option value="unavailable">Unavailable</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td >
+					<input type="submit" value="Submit" class="table2_button">
+				</td>
+				<td>
+					<input type="reset" value="Reset" class="table2_button">
+				</td>
+			</tr>
+		</table>
+	</div>
+	</form>
+	</center>
+	{% include "footer.html" %}
+</body>
+</html>

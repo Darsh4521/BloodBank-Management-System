@@ -1,0 +1,30 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>List</title>
+	<link rel="stylesheet" type="text/css" href="{% static '/style.css' %}">
+</head>
+<body>
+	{%include "header.html"%}
+	<table class="table8">
+		<tr>
+			<th class="table8_th">Name</th>
+			<th class="table8_th">Availability</th>
+			<th class="table8_th">Mobile No.</th>
+			<th class="table8_th">E-mail</th>
+		</tr>
+		{% if output_list %}
+		{% for user in output_list %}
+		<tr>
+			<td class="table8_td">{{ user.fname }}</td>
+			<td class="table8_td">{{ user.availability }}</td>
+			<td class="table8_td">{{ user.mobile_no }}</td>
+			<td class="table8_td">{{ user.email }}</td>
+		</tr>
+		{% endfor %}
+		{% endif %}
+	</table>
+	{%include "footer.html"%}
+</body>
+</html>

@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Profile</title>
+	<link rel="stylesheet" type="text/css" href="{% static '/style.css' %}">
+</head>
+<body>
+	<center>
+		{% include "header.html" %}
+		<form action="../update_details/" method="POST">
+			{% csrf_token %}
+
+			{% if ud %}
+			<div class="table2">
+				{% if msg %}
+			<strong>{{ msg }}</strong>
+			{% endif %}
+			<table border="0">
+			<tr>
+				<td class="table2_td">Full Name : </td>
+				<td><input type="text" name="fname" value="{{ ud.fname }}" class="table2_input"></td>			
+			</tr>
+			<tr>
+				<td class="table2_td">Blood Group : </td>
+				<td>
+					{{ ud.blood_group }}
+				</td>
+			</tr>
+			<tr>
+				<td class="table2_td">DOB : </td>
+				<td>
+					{{ ud.dob }}
+				</td>
+			</tr>
+			<tr>
+				<td class="table2_td">Mobile Number : </td>
+				<td><input type="text" name="mobileno" value={{ ud.mobile_no }} class="table2_input"></td>
+			</tr>
+			<tr>
+				<td class="table2_td">Country : </td>
+				<td>
+					<input type="text" name="country" value={{ ud.country }} class="table2_input">
+				</td>
+			</tr>
+			<tr>
+				<td class="table2_td">State : </td>
+				<td>
+					<input type="text" name="state" value={{ ud.state }} class="table2_input">
+				</td>
+			</tr>
+			<tr>
+				<td class="table2_td">City : </td>
+				<td>
+					<input type="text" name="city"  value={{ ud.city }} class="table2_input">
+				</td>
+			</tr>
+			<tr>
+				<td class="table2_td">Pincode : </td>
+				<td>
+					<input type="text" name="pincode" maxlength="6" value={{ ud.pincode }} class="table2_input">
+				</td>
+			</tr>
+			
+			<tr>
+				<td class="table2_td">Email Id : </td>
+				<td>
+					<input type="email" name="email" value={{ ud.email }} class="table2_input">
+				</td>
+			</tr>
+			<tr>
+				<td class="table2_td">Please confirm your availability <br> to donate blood : </td>
+				<td>
+					<select name="availability" class="table2_input">
+						<option value="available">Available</option>
+						<option value="unavailable">Unavailable</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="submit" value="Update" class="table2_button">
+				</td>
+				<td>
+					<input type="reset" value="Reset" class="table2_button">
+				</td>
+			</tr>
+			</table>
+			{% endif %}
+		</form>
+	</center>
+	{% include 'footer.html'%}
+</body>
+</html>

@@ -1,0 +1,65 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BloodBank Registration</title>
+	<link rel="stylesheet" type="text/css" href="{% static '/style.css' %}">
+</head>
+<body>
+	<center>
+		{%include "header.html"%}
+		<form action="../submit_bloodbank/" method="POST">
+			{% csrf_token %}
+			<div class="table9">
+			<table>
+			<tr>
+				<td class="table7_td">BloodBank Name :</td>
+				<td><input type="text" name="bank_name" class="table7_input"></td>
+			</tr>
+			<tr>
+				<td class="table7_td">Country : </td>
+				<td><input type="text" name="country" class="table7_input"></td>
+			</tr>
+			<tr>
+				<td class="table7_td">State : </td>
+				<td><input type="text" name="state" class="table7_input"></td>
+			</tr>
+			<tr>
+				<td class="table7_td">City : </td>
+				<td><input type="text" name="city" class="table7_input"></td>
+			</tr>
+			<tr>
+				<td class="table7_td">Pincode : </td>
+				<td><input type="text" name="pincode" maxlength="6" class="table7_input"></td>
+			</tr>
+			<tr>
+				<td class="table7_td">Contact No. : </td>
+				<td><input type="text" name="contact_no" class="table7_input"></td>
+			</tr>
+			<tr>
+				<td class="table7_td">E-mail :</td>
+				<td><input type="text" name="email" class="table7_input"></td>
+			</tr>
+			<tr>
+				<td class="table7_td">Password :</td>
+				<td><input type="password" name="password" class="table7_input"></td>
+			</tr>
+			<tr>
+				<td class="table7_td">Re Password :</td>
+				<td><input type="password" name="rpassword" class="table7_input"></td>
+			</tr>
+			<tr>
+				<td class="table7_td">ISO Certified? :</td>
+				<td><input type="radio" name="iso" value="Yes">YES  <input type="radio" name="iso" value="No">NO </td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Submit" class="table7_button"></td>
+				<td><input type="reset" name="Reset" class="table7_button"></td>
+			</tr>
+			</table>
+		</div>
+		</form>
+		{%include "footer.html"%}
+	</center>
+</body>
+</html>

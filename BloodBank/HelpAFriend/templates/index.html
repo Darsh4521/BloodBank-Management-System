@@ -1,0 +1,71 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Help A Friend</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+	 {% include "header.html" %}
+	 <div class="images">
+		<div class="w3-content w3-display-container">
+
+		 <img class="mySlides" src="{% static 'images/01.jpg'%}" width="100%">
+		 <img class="mySlides" src="{% static 'images/02.jpg'%}" width="100%">
+		 <img class="mySlides" src="{% static 'images/03.jpg'%}" width="100%">
+
+		 <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+		  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+		</div>
+	</div>
+
+	<div class="table12_text"><caption>Current Blood Request : </caption></div>
+	{% if last_five %}
+	<table class="table12">
+		<tr>
+			<th class="table12_th">Patient Name</th>
+			<th class="table12_th">Blood Group</th>
+			<th class="table12_th">Required Date</th>
+			<th class="table12_th">Required Unit(mL)</th>
+			<th class="table12_th">Mobile No.</th>
+			<th class="table12_th">City</th>
+		</tr>
+	{% for last in last_five %}
+		<tr>
+			<td class="table12_td">{{ last.pname }}</td>
+			<td class="table12_td">{{ last.blood_group }}</td>
+			<td class="table12_td">{{ last.required_date }}</td>
+			<td class="table12_td">{{ last.blood_unit }}</td>
+			<td class="table12_td">{{ last.mobile_no }}</td>
+			<td class="table12_td">{{ last.patient_address }}</td>
+		</tr>
+	{% endfor %}
+	{% endif %}	
+	</table>
+	
+
+
+	 {% include "footer.html" %}
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+</body>
+</html>

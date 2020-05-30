@@ -1,0 +1,40 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blood Bank</title>
+	<link rel="stylesheet" type="text/css" href="{% static '/style.css' %}">
+</head>
+<body>
+	{%include "header.html"%}
+	<center>
+		<table class="table8">
+			<tr>
+				<th class="table8_th">BloodBank Name</th>
+				<th class="table8_th">Blood Group</th>
+				<th class="table8_th">Available Units</th>
+				<th class="table8_th">Contact No.</th>
+				<th class="table8_th">E-mail</th>
+				<th class="table8_th">ISO Certified</th>
+			</tr>
+			{% if output_bank_list and output_blood_list %}
+			{% for blood in output_blood_list %}
+			{% for bank in output_bank_list %}
+			{% if blood.bloodbank_id == bank %}
+			<tr>
+				<td class="table8_td">{{ bank.name }}</td>
+				<td class="table8_td">{{ blood.blood_group }}</td>
+				<td class="table8_td">{{ blood.available_units }}</td>
+				<td class="table8_td">{{ bank.contact_no }}</td>
+				<td class="table8_td">{{ bank.email }}</td>
+				<td class="table8_td">{{ bank.iso_certified }}</td>
+			</tr>
+			{% endif %}
+			{% endfor %}
+			{% endfor %}
+			{% endif %}
+		</table>
+	</center>
+	{%include "footer.html"%}
+</body>
+</html>

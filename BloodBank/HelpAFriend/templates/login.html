@@ -1,0 +1,85 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<style type="text/css">
+		.button:hover
+		{
+			background-color:#4CAF50;
+			border: none;
+  			color: white;
+  			padding: 9px 30px;
+  			text-align: center;
+ 		 	text-decoration: none;
+  			display: inline-block;
+  			font-size: 16px;
+  			margin: 18px 10px;
+  			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<center>
+		{% include "header.html" %}
+		
+		<div class="form">
+		<form action="../auth/" method="POST">
+			{% csrf_token %} 			
+			<div class="caption1" style="position: absolute;color: #cc0000;font-size: 65px;margin-left: 45%;margin-top: 8%;"><caption>Login</caption></div>
+
+			<table border="0" style="  position:absolute; margin-top:16%; margin-left:39%;">
+				<tr>
+					<td style="color: #cc0000;font-size: 22px"> E-mail : </td>
+					<td><input type="text" name="email" style="width: 130%; border: none; border-bottom: 1px solid #cc0000"></td>
+				</tr>
+				<tr>
+					<td style="color: #cc0000;font-size: 22px">Password : </td>
+					<td><input type="Password" name="password" style="width: 130%; border: none;border-bottom: 1px solid #cc0000"></td>
+				</tr>
+				<tr>
+					<td style="color: #cc0000;font-size: 22px">Login as : </td>
+					<td><input type="radio" name="type" value="donor" style="color: #cc0000;font-size: 22px">Donor <input type="radio" name="type" value="bloodbank" style="color: #cc0000;font-size: 22px">BloodBank</td>
+				</tr>
+				<tr><center>
+					<td><input type="submit" value="Submit" style=" background-color: #cc0000;
+  border: none;
+  color: white;
+  padding: 9px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 18px 10px;
+  cursor: pointer;"
+  ></td>
+					<td><input type="reset" value="Reset" class="button" style=" background-color: #cc0000;
+  border: none;
+  color: white;
+  padding: 9px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 18px 10px;
+  cursor: pointer;
+  "></div></td>
+				</tr></center>
+				<tr>
+					<td colspan="2"><a href="../forgot_password/"> Forgot Password?</a></td>
+				</tr><br>
+				<tr>
+					<td colspan="2">Not Account?
+					<a href="../registration/">Register</a></td>
+				</tr>
+			</table>
+			{% if error_msg %}
+			{{ error_msg }}
+			{% endif %}
+		</form>
+		</div>
+		{% include "footer.html" %}
+	</center>
+</body>
+</html>

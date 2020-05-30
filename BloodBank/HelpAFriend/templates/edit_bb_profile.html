@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BloodBank Profile</title>
+	<link rel="stylesheet" type="text/css" href="{% static '/style.css' %}">
+</head>
+<body>
+	{% include "header.html" %}
+	<center>
+		<form action="../update_bb_details/" method="POST">
+			{% csrf_token %}
+
+			{% if bd%}
+			<table class="table10">
+				{% if msg %}
+			<strong>{{ msg }}</strong>
+			{% endif %}
+			<tr>
+				<td class="table2_td">BloodBank Name :</td>
+				<td>
+					{{bd.name}}
+				</td>
+			</tr>
+			<tr>
+				<td class="table2_td">Country : </td>
+				<td><input type="text" name="country" value={{ bd.country }} class="table2_input"></td>
+			</tr>
+			<tr>
+				<td class="table2_td">State : </td>
+				<td><input type="text" name="state" value={{ bd.state }} class="table2_input"></td>
+			</tr>
+			<tr>
+				<td class="table2_td">City : </td>
+				<td><input type="text" name="city" value={{ bd.city }} class="table2_input"></td>
+			</tr>
+			<tr>
+				<td class="table2_td">Pincode : </td>
+				<td><input type="text" name="pincode" maxlength="6" value={{ bd.pincode }} class="table2_input"></td>
+			</tr>
+			<tr>
+				<td class="table2_td">Contact No. : </td>
+				<td><input type="text" name="contact_no" value={{ bd.contact_no }} class="table2_input"></td>
+			</tr>
+			<tr>
+				<td class="table2_td">E-mail :</td>
+				<td><input type="text" name="email" value={{ bd.email }} class="table2_input"></td>
+			</tr>
+			<tr>
+				<td class="table2_td">ISO Certified? :</td>
+				<td><input type="radio" name="iso" value="Yes">YES  <input type="radio" name="iso" value="No">NO </td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Submit" class="table2_button"></td>
+				<td><input type="reset" name="Reset" class="table2_button"></td>
+			</tr>
+			</table>
+		{% endif %}
+		</form>
+	</center>
+	{%include 'footer.html'%}
+</body>
+</html>

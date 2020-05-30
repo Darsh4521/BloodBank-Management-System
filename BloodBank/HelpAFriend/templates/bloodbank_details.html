@@ -1,0 +1,35 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blood Details</title>
+	<link rel="stylesheet" type="text/css" href="{% static '/style.css' %}">
+</head>
+<body>
+	{%include "header.html"%}
+	<center>		
+		<form action="../update_units/" method="POST">
+		{% csrf_token %}
+		<table border="0" class="table8">
+			<tr>
+				<th class="table8_th">Blood Group</th>
+				<th class="table8_th">Avaiable Units</th>
+				<th class="table8_th">Add</th>
+			</tr>
+			{% if output_list %}
+			{% for blood in output_list %}
+			<tr>
+				<td class="table8_td">{{ blood.blood_group }}</td>
+				<td class="table8_td">{{ blood.available_units }}</td>
+				<td class="table8_td"><input type="text" name={{ blood.blood_id }} value={{ blood.available_units }} class="table9_input"></td>
+			</tr>
+			{% endfor %}
+			{% endif %}
+		<tr>	
+		<td colspan="3"><center><input type="submit" value="Update" class="table2_button"></center></td>
+	</tr>
+</table>
+	</center>
+	{%include "footer.html"%}
+</body>
+</html>

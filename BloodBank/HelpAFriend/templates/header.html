@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static '/style.css' %}">
+</head>
+<body>
+	<div class="header">
+		<div class="menu1">
+			<div class="logo">
+				<img src="{% static 'images/logo.png'%}" height="55px">
+			</div>
+				<h3>Help A Friend</h3>	
+			{% if request.session.fname %}
+				{% include 'user_home.html'%}
+			{% elif request.session.name %}
+				{% include 'bloodbank_home.html' %}
+			{% else %}	
+				{% include 'header_login.html' %}
+			{% endif %}	
+			<ul>
+ 				<li><a href="../aboutus">About Us</a></li>
+				<li><a href="../post_request/">Request</a></li>
+				<li><a href="../search">Search</a></li>
+				<li><a href="../index/">Home</a></li>
+			</ul>
+		</div>	
+	</div>
+</body>
+</html>

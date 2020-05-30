@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{% static '/style.css' %}">
+</head>
+<body>
+	{% if request.session.fname %}
+	<div class="dropdown">
+	{{ request.session.fname }}
+	<div class="dropdown-content">
+	<a href="../edit_profile/">Edit Profile</a><br>
+	<a href="../change_pass/">Change Password</a><br>
+	<a href="../logout/">Logout</a>
+	</div>
+	</div>
+	{% endif %}
+</body>
+</html>
